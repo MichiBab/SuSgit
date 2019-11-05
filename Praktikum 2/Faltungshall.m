@@ -18,15 +18,10 @@ g = conv(s,h);
 g_norm = g/max(abs(g));
 %%
 %%Abspielen
-% sound(s, Samplefrequenz);
-% pause();
-% sound(g_norm, Samplefrequenz);
+sound(s, Samplefrequenz);
+pause();
+sound(g_norm, Samplefrequenz);
 
-%%
-% echo = zeros(10000,1);
-% echo(1) = 1;
-% echo(10000)=1;
-% erg = conv(s,x);
-% sound(erg,Samplefrequenz);
+
 
 

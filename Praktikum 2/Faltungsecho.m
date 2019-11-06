@@ -25,8 +25,6 @@ letzteStelle = uint16(max(positionen)*Samplefrequenz);
 %+1, da arrays mit 1 starten
 echomatrix = zeros(1+letzteStelle,1);
 
-length(positionen)
-
 for i=1:1:length(positionen)
     %+1, da arrays mit 1 starten
     pos = 1+(uint16(positionen(i)*Samplefrequenz));

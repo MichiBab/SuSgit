@@ -12,16 +12,17 @@ s_size = length(s);
 h_size = length(h);
 
 %% Faltung
-g = conv(s,h);
-%%
-%%Normalisierung
-g_norm = g/max(abs(g));
-%%
-%%Abspielen
+tic, gOwn = MyConv(s,h); toc
+tic, gMatlab = conv(s,h); toc
+
+%% Normalisierung
+gOwn_norm = gOwn/max(abs(gOwn));
+
+gMatlab_norm = gMatlab/max(abs(gMatlab));
+
+%% Abspielen
 sound(s, Samplefrequenz);
-pause();
-sound(g_norm, Samplefrequenz);
-
-
-
-
+pause
+sound(gOwn_norm, Samplefrequenz);
+pause
+sound(gMatlab_norm, Samplefrequenz);
